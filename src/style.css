@@ -13,12 +13,12 @@ h1 {
   margin-bottom: 0;
   margin-top: 0;
   font-weight: bold;
-  font-size: 46px;
 }
 
 h2 {
+  margin-top: 19px;
   margin-bottom: 0;
-  line-height: 78px;
+  line-height: 57px;
   font-weight: 600;
   color: #2f2e41;
 }
@@ -27,13 +27,13 @@ h3 {
   font-size: 20px;
 }
 h5 {
-  margin-top: 35px;
-  margin-left: 268px;
+  margin-top: 27px;
+  margin-left: 240px;
+  font-size: 16px;
 }
 
 ul {
   margin: 0;
-  margin-top: 64px;
   padding: 0;
 }
 li {
@@ -42,14 +42,26 @@ li {
   padding: 0;
   font-size: 16px;
 }
-.wrapper {
+small {
+  text-align: right;
+  margin: 0;
+  margin-right: 46px;
+  display: block;
+}
+h1 strong {
+  font-size: 46px;
+}
+.weather-app-wrapper {
   max-width: 850px;
+  margin: 40px auto;
+}
+.weather-app {
   height: 450px;
   border: 7px solid rgba(85, 129, 154, 0.4);
   border-radius: 55px;
   box-shadow: 10px 10px 10px rgb(0 0 0 / 30%);
   display: block;
-  margin: 40px auto;
+  margin-bottom: 5px;
   padding: 30px 30px 20px 20px;
   background: linear-gradient(
     90deg,
@@ -62,4 +74,9 @@ li {
   background-image: url(../images/undraw.svg);
   background-repeat: no-repeat;
   background-size: 550px 300px;
+}
+h1 .units {
+  font-size: 25px;
+  position: relative;
+  top: -7px;
 }
