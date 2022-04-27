@@ -5,12 +5,44 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+h1,
+h3 {
+  line-height: 35px;
+}
+h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 46px;
+}
+
+h2 {
+  margin-bottom: 0;
+  line-height: 78px;
+  font-weight: 600;
+  color: #2f2e41;
+}
+h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+h5 {
+  margin-top: 35px;
+  margin-left: 268px;
+}
+
+ul {
+  margin: 0;
+  margin-top: 64px;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
 .wrapper {
-  background: radial-gradient(
-    621px at 25.3% 13.8%,
-    rgb(255, 255, 255) 0%,
-    rgb(234, 236, 255) 90%
-  );
   max-width: 850px;
   height: 450px;
   border: 7px solid rgba(85, 129, 154, 0.4);
@@ -19,8 +51,14 @@ body {
   display: block;
   margin: 40px auto;
   padding: 30px 30px 20px 20px;
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgb(215, 224, 235) 97%
+  );
 }
 .today-card {
+  margin-top: 40px;
   background-image: url(../images/undraw.svg);
   background-repeat: no-repeat;
   background-size: 550px 300px;
