@@ -1,0 +1,27 @@
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url(../images/vecteez.jpg);
+  background-size: 1272px 646px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.wrapper {
+  background: radial-gradient(
+    621px at 25.3% 13.8%,
+    rgb(255, 255, 255) 0%,
+    rgb(234, 236, 255) 90%
+  );
+  max-width: 850px;
+  height: 450px;
+  border: 7px solid rgba(85, 129, 154, 0.4);
+  border-radius: 55px;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 30%);
+  display: block;
+  margin: 40px auto;
+  padding: 30px 30px 20px 20px;
+}
+.today-card {
+  background-image: url(../images/undraw.svg);
+  background-repeat: no-repeat;
+  background-size: 550px 300px;
+}
