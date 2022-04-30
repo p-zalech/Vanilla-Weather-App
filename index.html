@@ -24,28 +24,40 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <div class="row">
+          <div class="row main">
             <div class="col-6 today-card">
+              <div class="clearxix">
+                <img src="" alt="" class="float-right" id="icon" />
+                <h3 id="description"></h3>
+              </div>
               <h1>
                 <strong id="temperature"></strong>
                 <span class="units">°C |°F</span>
               </h1>
-              <h3 id="description"></h3>
-              <img src="images/partly-cloudy-day.png" />
               <h4>
                 <ul>
                   <li>Humidity: <span id="humidity"></span>%</li>
                   <li>Wind: <span id="wind"></span> km/h</li>
                 </ul>
               </h4>
-              <h2>Today</h2>
-              <h6>Last updated: <span id="date"></span></h6>
-              <h5>
-                <span id="day"></span> <span id="month">September</span>
-                <div id="city"></div>
-              </h5>
+              <span id="dateSection">
+                <div class="row section">
+                  <div class="col-6">
+                    <div class="today">Today</div>
+                    <div class="updateTime">
+                      Last updated: <span id="date"></span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="dateAndLocation">
+                      <span id="day"></span> <span id="month">September</span>
+                      <div class="city" id="city"></div>
+                    </div>
+                  </div>
+                </div>
+              </span>
             </div>
-            <div class="col-6"><h1>Forecast</h1></div>
+            <div class="col-6"></div>
           </div>
         </div>
         <small>

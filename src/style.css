@@ -5,23 +5,19 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+img {
+  margin-bottom: -42px;
+}
 h1,
 h3 {
   line-height: 35px;
 }
 h1 {
-  margin-bottom: 0;
-  margin-top: 37px;
+  margin-bottom: 0px;
+  margin-top: 0px;
   font-weight: bold;
 }
 
-h2 {
-  margin-top: 19px;
-  margin-bottom: 0;
-  line-height: 57px;
-  font-weight: 600;
-  color: #2f2e41;
-}
 h3 {
   margin-top: 0;
   font-size: 20px;
@@ -29,14 +25,11 @@ h3 {
 h3::first-letter {
   text-transform: capitalize;
 }
-h5 {
-  margin-top: -10px;
-  margin-left: 240px;
-  font-size: 16px;
-}
-h6 {
-  margin-top: -10px;
-  font-size: 15px;
+
+img {
+  margin-top: -25px;
+  margin-bottom: -10px;
+  filter: opacity(80%);
 }
 
 ul {
@@ -76,14 +69,35 @@ h1 strong {
     rgb(215, 224, 235) 97%
   );
 }
-.today-card {
+.main {
   margin-top: 40px;
-  background-image: url(../images/undraw.svg);
+  background-image: url(../images/autumn.svg);
+  background-position: 3% 90%;
   background-repeat: no-repeat;
-  background-size: 550px 300px;
+  background-size: 550px 347px;
 }
+
 h1 .units {
   font-size: 25px;
   position: relative;
   top: -7px;
+}
+.today {
+  font-size: 28px;
+  margin-top: 34px;
+  line-height: 57px;
+  font-weight: 600;
+  color: #2f2e41;
+}
+.updateTime {
+  font-size: 11px;
+  margin-top: -9px;
+}
+.dateAndLocation {
+  font-size: 14px;
+  margin-top: 57px;
+  margin-left: 34px;
+}
+.city {
+  margin-top: -5px;
 }

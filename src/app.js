@@ -30,6 +30,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let dayElement = document.querySelector("#day");
   let monthElement = document.querySelector("#month");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -74,10 +75,18 @@ function displayTemperature(response) {
     "December",
   ];
   monthElement.innerHTML = months[currentDay.getMonth()];
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+  );
 }
 
 let apiKey = "09d782b670469e485d317871e7a35468";
-let city = "Warsaw";
+let city = "Moscow";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
