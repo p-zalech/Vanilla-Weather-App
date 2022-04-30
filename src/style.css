@@ -82,6 +82,12 @@ h1 .units {
   position: relative;
   top: -7px;
 }
+.main {
+  margin-top: 0px;
+}
+.form-control {
+  margin-bottom: 30px;
+}
 .today {
   font-size: 28px;
   margin-top: 34px;
