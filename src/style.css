@@ -51,6 +51,13 @@ small {
 h1 strong {
   font-size: 46px;
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #2f2e41;
+}
 .weather-app-wrapper {
   max-width: 850px;
   margin: 40px auto;
@@ -106,4 +113,7 @@ h1 .units {
 }
 .city {
   margin-top: -5px;
+}
+.active {
+  color: #2f2e41;
 }
