@@ -42,18 +42,25 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let currentDay = new Date();
   dayElement.innerHTML = currentDay.getDate();
-  if ((dayElement.innerHTML = 1 || 11 || 21 || 31)) {
+  if (
+    dayElement.innerHTML == 1 ||
+    dayElement.innerHTML == 11 ||
+    dayElement.innerHTML == 21 ||
+    dayElement.innerHTML == 31
+  ) {
     dayElement.innerHTML = `${dayElement.innerHTML}st`;
+  } else if (
+    dayElement.innerHTML == 2 ||
+    dayElement.innerHTML == 12 ||
+    dayElement.innerHTML == 22
+  ) {
+    dayElement.innerHTML = `${dayElement.innerHTML}nd`;
+  } else if (dayElement.innerHTML == 3 || dayElement.innerHTML == 13) {
+    dayElement.innerHTML = `${dayElement.innerHTML}rd`;
   } else {
-    if ((dayElement.innerHTML = 2 || 12 || 22)) {
-      dayElement.innerHTML = `${dayElement.innerHTML}nd`;
-    }
-    if ((dayElement.innerHTML = 3 || 13)) {
-      dayElement.innerHTML = `${dayElement.innerHTML}rd`;
-    } else {
-      dayElement.innerHTML = `${dayElement.innerHTML}th`;
-    }
+    dayElement.innerHTML = `${dayElement.innerHTML}th`;
   }
+
   let months = [
     "January",
     "February",
