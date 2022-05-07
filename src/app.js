@@ -21,6 +21,62 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#weather-forecast-row");
+
+  let forecastHTML = "";
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="row weather-forecast-row">
+              <div class="clearfix">
+              <span class="col-4 weather-forecast-date">${formatDay(
+                forecastDay.dt
+              )}</span>
+              <span class="col-4"><img class="weather-forecast-image" src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png" width="100" alt=""></span>
+              <span class="col-4 weather-forecast-temperature">
+                <span class="forecast-maximum-temperature">${Math.round(
+                  forecastDay.temp.max
+                )}°</span> 
+                <span class="forecast-minimum-temperature">${Math.round(
+                  forecastDay.temp.min
+                )}°</span>
+              </span>
+              </div>
+              </div>`;
+    }
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "09d782b670469e485d317871e7a35468";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -84,6 +140,8 @@ function displayTemperature(response) {
     "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
