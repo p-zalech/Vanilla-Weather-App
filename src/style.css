@@ -117,3 +117,38 @@ h1 .units {
 .active {
   color: #2f2e41;
 }
+.weather-forecast-row {
+  box-sizing: border-box;
+  border: 3px solid rgba(85, 129, 154, 0.4);
+  height: 70px;
+  width: 350px;
+  border-radius: 99.9px;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 10%);
+  margin-bottom: 10px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+}
+.col-4 {
+  margin-bottom: 10px;
+}
+.weather-forecast-date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 21px;
+  font-weight: 650;
+  color: #2f2e41;
+  opacity: 0.9;
+  margin-left: 30px;
+}
+.weather-forecast-image {
+  margin: 0px;
+  padding: 0px;
+  height: 82px;
+  position: relative;
+  top: -10px;
+}
+.weather-forecast-temperature {
+}
+.forecast-minimum-temperature {
+  opacity: 0.6;
+}
